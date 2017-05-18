@@ -200,9 +200,9 @@ func (m *Metadata) Connect() error {
 		}
 	}
 
-	// // NOTE: Schema consistency check is ignored by CREATE query. (https://git-wip-us.apache.org/repos/asf?p=cassandra.git;a=blob_plain;f=doc/native_protocol_v4.spec)
-	// // To ensure schema consistency we perform a simple SELECT query on 'system_schema.keyspaces'.
-	// // Consistency level is taken from 'cluster.Consistency' variable, it can also be defined for individual Query.
+	// NOTE: Schema consistency check is ignored by CREATE query. (https://git-wip-us.apache.org/repos/asf?p=cassandra.git;a=blob_plain;f=doc/native_protocol_v4.spec)
+	// To ensure schema consistency we perform a simple SELECT query on 'system_schema.keyspaces'.
+	// Consistency level is taken from 'cluster.Consistency' variable, it can also be defined for individual Query.
 	// if err = session.Query("SELECT * FROM system_schema.keyspaces;").Exec(); err != nil {
 	// 	return err
 	// }
@@ -211,7 +211,7 @@ func (m *Metadata) Connect() error {
 		return err
 	}
 
-	// // NOTE: Same issue as above.
+	// NOTE: Same issue as above.
 	// if err = session.Query("SELECT * FROM system_schema.keyspaces;").Exec(); err != nil {
 	// 	return err
 	// }
